@@ -1,0 +1,11 @@
+<mapper namespace="com.demo.mymybatis.mapper.UserMapper">
+    <select id="selectUserById" parameterType="int" resultType="com.demo.mymybatis.User">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+    <insert id="insertUser" parameterType="com.demo.mymybatis.User">
+        INSERT INTO users (name, age) VALUES (#{name}, #{age})
+    </insert>
+    <select id="selectAllUsers" resultType="com.demo.mymybatis.User">
+        SELECT * FROM users
+    </select>
+</mapper>
